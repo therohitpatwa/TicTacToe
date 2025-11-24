@@ -52,7 +52,7 @@ function checkWin()
         [0, 1, 2],
         [3, 4, 5],
         [6, 7, 8],
-        [0, 3, 6],
+        [0, 3, 6],                                                                                                                                                              
         [1, 4, 7],
         [2, 5, 8],
         [2, 4, 9]
@@ -69,16 +69,20 @@ function checkWin()
 
 
 
-while (gameActive) {
-  printBoard();
-  const position = prompt(`Player ${currentPlayer}, enter your move (1-9): `);
+while(gameActive)
+{
+    printBoard(); 
+    let position=prompt(`Player ${currentPlayer}, Enter your move (1-9):`);
 
-  if (position-1 >= 0 && position-1 <= 8) {
-    handleMove(parseInt(position-1));
-  } else {
-    console.log("Invalid position, enter a number between 1 and 9.");
-  }
+    if(position-1>=0 && position-1<=8)
+    {
+         handleMove(parseInt(position-1));
+    }
+    else{
+        console.log("Invalid Number ! Please Enter Valid Position");
+    }
 }
+
 
 
 
